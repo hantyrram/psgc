@@ -1,0 +1,23 @@
+{
+  "name": "psgc",
+  "version": "1.0.0",
+  "description": "Contains the Philippine Standard Geographic Code Api Server and Documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "psgc",
+    "philippines",
+    "regions"
+  ],
+  "author": "Ronaldo A. Ramano",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hantyrram/psgc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hantyrram/psgc/issues"
+  },
+  "homepage": "https://github.com/hantyrram/psgc#readme"
+}

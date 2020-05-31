@@ -1,0 +1,102 @@
+swagger: "2.0"
+info: 
+  title: PSGC Api
+  description: Api for retrieving the Philippine Standard Geographic Codes
+  termsOfService: http://dev.hantyr.com/psgc/terms
+  contact:
+    name: API Support
+    url: http://dev.hantyr.com/support
+    email: rongrammer@hotmail.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.1
+paths: 
+  /:
+    summary: "Retrieve all data"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+    parameters: 
+      - in : query
+        name: islandgroup
+        description: The name of the island groud e.g. luzon
+      - in : query        
+        name: region
+        description: The region number e.g. region=3 returns the codes under Region III
+      - in : query
+        name: prov
+        description: The name of the province e.g. prov=Bulacan returns the barangays, cities, municapilities in Bulacan
+      - in : query
+        name: city
+        description: The name of the city e.g. city=Tacloban returns the barangays in Tacloban
+      - in : query      
+        name: mun
+        description: The name of the municipality e.g. mun=Tacloban returns the barangays in Tacloban
+      - in : query
+        name: bgy
+        description: The name of the barangay e.g. mun=Tacloban returns the data of Brgy Villarosa
+      - in : query
+        name: geolevel
+        description: "Filters the result of a query by returning only the specified geographic level,
+        e.g. islandgroup=luzon&geolevel=bgy returns only the barangays of luzon"
+  /islandgroups:
+    summary: "Retrieve all island groups"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+  /bgys:
+    summary: "Retrieve all barangays"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+  /municipalities:
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+    summary: "Retrieve all municipalities" 
+  /cities:
+    summary: "Retrieve all cities"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+  /districts:
+    summary: "Retrieve all districts"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+  /regions:
+    summary: "Retrieve all regions"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+
+  

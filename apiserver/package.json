@@ -1,0 +1,21 @@
+{
+  "name": "psgc",
+  "version": "1.0.0",
+  "author": "Ronaldo A. Ramano",
+  "description": "Philippine Standard Geographic Code Api Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "philippines",
+    "cities",
+    "municipalities"
+  ],
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^9.0.1",
+    "express": "^4.17.1",
+    "xlsx": "^0.15.4"
+  },
+  "devDependencies": {}
+}

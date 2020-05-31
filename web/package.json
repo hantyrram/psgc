@@ -1,0 +1,40 @@
+{
+  "name": "psgc-doc",
+  "version": "1.0.0",
+  "description": "Philippine Standard Geographic Code Api Documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "keywords": [
+    "philgc",
+    "api",
+    "doc"
+  ],
+  "author": "Ronaldo A. Ramano",
+  "dependencies": {
+    "@material-ui/core": "^4.10.0",    
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "swagger-ui": "^3.25.5",
+    "swagger-ui-react": "^3.25.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "http-proxy-middleware": "^1.0.4",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "html-webpack-plugin": "^4.3.0"
+  }
+}

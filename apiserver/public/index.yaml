@@ -1,0 +1,109 @@
+# swagger: "2.0"
+openapi: 3.0.0
+info:
+  description: "**The Philippine Standard Geographic Code (PSGC)** Is the classification and coding of the geographical-political subdivisions of the country, such as the region, the province, the municipality/city and barangay.
+    The **Hantyr PSGC Api** returns a list of these classifications with specifity given some query parameters"
+  version: "1.0.0"
+  title: "Hantyr PSGC Api"
+  termsOfService: "http://dev.hantyr.com/psgc/terms/"
+  contact:
+    email: "rongrammer@hotmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "dev.hantyr.com"
+basePath: "/psgc"
+tags:
+- name: "geolevel"
+  description: "Geographic Level e.g. city, municipality"
+schemes:
+  - "http"
+paths:
+  /:
+    summary: "Retrieve all data"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+    parameters: 
+      - in : query
+        name: islandgroup
+        description: The name of the island groud e.g. luzon
+      - in : query        
+        name: region
+        description: The region number e.g. region=3 returns the codes under Region III
+      - in : query
+        name: prov
+        description: The name of the province e.g. prov=Bulacan returns the barangays, cities, municapilities in Bulacan
+      - in : query
+        name: city
+        description: The name of the city e.g. city=Tacloban returns the barangays in Tacloban
+      - in : query      
+        name: mun
+        description: The name of the municipality e.g. mun=Tacloban returns the barangays in Tacloban
+      - in : query
+        name: bgy
+        description: The name of the barangay e.g. mun=Tacloban returns the data of Brgy Villarosa
+      - in : query
+        name: geolevel
+        description: "Filters the result of a query by returning only the specified geographic level,
+        e.g. islandgroup=luzon&geolevel=bgy returns only the barangays of luzon"
+  /islandgroups:
+    summary: "Retrieve all island groups"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+  /bgys:
+    summary: "Retrieve all barangays"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+  /municipalities:
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+    summary: "Retrieve all municipalities" 
+  /cities:
+    summary: "Retrieve all cities"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+  /districts:
+    summary: "Retrieve all districts"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+  /regions:
+    summary: "Retrieve all regions"
+    x-serviceProvider: PSGC
+    x-serviceProviderOp: all
+    x-middlewares: 
+      - schemaValidator
+    x-schemaValidator:
+      - op: edit
+      - schema: Test
+
+  
