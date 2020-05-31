@@ -59,7 +59,7 @@ const transform = (e)=>{
 let alls = excel.utils.sheet_to_json(psgcWorksheet);
 // all = alls.map(minimized);
 all = alls.map(transform);
-app.use('/apiv1/definition',express.static(path.join(__dirname,'api')));
+app.use('/psgc/apiv1/definition',express.static(path.join(__dirname,'api')));
 app.use(express.json());
 
 const filter = (req,res,next)=>{

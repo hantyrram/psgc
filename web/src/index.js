@@ -18,7 +18,7 @@ import "swagger-ui-react/swagger-ui.css";
 
 SwaggerUI({
   dom_id: '#root',
-  url: "apiv1/definition/index.yaml"
+  url: "psgc/apiv1/definition/index.yaml"
 })
 
 
