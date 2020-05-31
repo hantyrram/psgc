@@ -195,25 +195,25 @@ const filter = (req,res,next)=>{
    res.json(data);
 }
 
-app.get('/',filter);
+app.get('/psgc/apiv1',filter);
 
-app.get('/islandgroups',function(req,res,next){
+app.get('/psgc/apiv1/islandgroups',function(req,res,next){
    res.json({data: ['Luzon','Visayas','Mindanao']});
 });
 
-app.get('/bgys',function(req,res,next){
+app.get('/psgc/apiv1/bgys',function(req,res,next){
 	res.json({
 		data: all.filter(e => e[GEOGRAPHIC_LEVEL] === "Bgy")
 	})
 });
 
-app.get('/cities',function(req,res,next){
+app.get('/psgc/apiv1/cities',function(req,res,next){
 	res.json({
 		data: all.filter(e=>e[GEOGRAPHIC_LEVEL] === "City")
 	})
 });
 
-app.get('/municipalities',function(req,res,next){
+app.get('/psgc/apiv1/municipalities',function(req,res,next){
 	res.json({
 		data: all.filter(e=>e[GEOGRAPHIC_LEVEL] === "Mun").reduce((acc,el,i)=>{
 				if(!req.query.name){
@@ -227,19 +227,19 @@ app.get('/municipalities',function(req,res,next){
    
 });
 
-app.get('/districts',function(req,res,next){
+app.get('/psgc/apiv1/districts',function(req,res,next){
 	res.json({
 		data: all.filter(e=>e[GEOGRAPHIC_LEVEL] === "Dist")
 	})
 });
 
-app.get('/regions',function(req,res,next){
+app.get('/psgc/apiv1/regions',function(req,res,next){
 	res.json({
 		data: all.filter(e=>e[GEOGRAPHIC_LEVEL] === "Reg")
 	})
 });
 
-app.get('/provinces',function(req,res,next){
+app.get('/psgc/apiv1/provinces',function(req,res,next){
 	res.json({
 		data: all.filter(e=>e[GEOGRAPHIC_LEVEL] === "Prov")
 	})
