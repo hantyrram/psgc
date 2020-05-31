@@ -4,7 +4,7 @@ const excel = require('xlsx');
 const path = require('path');
 const SwaggerParser = require("@apidevtools/swagger-parser");
 
-const workbook = excel.readFile(path.join(process.env.PWD,'PSGCPublication.xlsx'));
+const workbook = excel.readFile(path.join(__dirname,'PSGCPublication.xlsx'));
 const psgcWorksheet = workbook.Sheets['PSGC'];
 
 const minimized = (e)=>{ // use on map to minimize data, removed population and income data
