@@ -15,11 +15,14 @@ import "swagger-ui-react/swagger-ui.css";
 
 // ReactDOM.render(<App />, document.getElementById("root"))
 
-
+/**
+ * 
+ */
 SwaggerUI({
   dom_id: '#root',
-  url: "psgc/apiv1/definition/index.yaml"
+  url: "/psgc/apiv1/definition/index.yaml"
 })
+
 
 
 
