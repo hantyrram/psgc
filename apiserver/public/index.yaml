@@ -2,16 +2,16 @@
 openapi: 3.0.0
 info:
   description: "**The Philippine Standard Geographic Code (PSGC)** Is the classification and coding of the geographical-political subdivisions of the country, such as the region, the province, the municipality/city and barangay.
-    The **Hantyr PSGC Api** returns a list of these classifications with specifity given some query parameters"
+    The **PSGC Api** returns a list of these classifications with specifity given some query parameters"
   version: "1.0.0"
-  title: "Hantyr PSGC Api"
+  title: "PSGC Api"
   termsOfService: "http://dev.hantyr.com/psgc/terms/"
   contact:
     email: "rongrammer@hotmail.com"
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "dev.hantyr.com"
+host: "psgc.hantyr.com"
 basePath: "/psgc"
 tags:
 - name: "geolevel"
