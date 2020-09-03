@@ -6,7 +6,7 @@ module.exports = {
    entry: './src/index.js',   
    output:{
       //Build outside, so that the root in server for location /psgc will be the container of the psgc app e.g. /data
-      path: path.join(__dirname,'../'),
+      path: path.join(__dirname,'../web_dist'),
       filename: 'philgc.bundle.js',
    },
    plugins: [

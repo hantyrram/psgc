@@ -20,7 +20,7 @@ import "swagger-ui-react/swagger-ui.css";
  */
 SwaggerUI({
   dom_id: '#root',
-  url: "http://psgc.hantyr.com/psgc/apiv1/definition/index.yaml"
+  url: "http://psgc.hantyr.com/specs/index.yaml"
 })
 
 
